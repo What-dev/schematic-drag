@@ -1,8 +1,9 @@
+
 # Schematic Drag
 
 A client-only Fabric mod for dragging Litematica schematic placements while using
 freecam.
-
+[Screencast_20260909_133341.webm](https://github.com/user-attachments/assets/58db199d-9e91-4e09-8dbb-c199bc8c9df8)
 ## Disclaimer
 
 This project was made 100% with AI assistance. I do not know how to make

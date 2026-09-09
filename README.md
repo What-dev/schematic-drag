@@ -17,12 +17,11 @@ Minecraft mods; I created it purely as a utility I wanted.
 
 - Minecraft 26.2
 - Fabric Loader 0.19.5 or newer
-- Fabric API
+  - Fabric API
 - Litematica 0.28.8 or newer
-- MaLiLib
+  - MaLiLib
 
-Tweakeroo is optional. The mod detects a detached camera and does not require
-Tweakeroo specifically.
+The mod (hopefully) detects any sort of freecam mod where the camera would be detached from the player. I have only personally tested with tweakaroos freecam, but any other should do the trick.
 
 ## Usage
 

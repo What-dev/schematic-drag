@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/29c475d6-74e1-4ae1-b1a3-2c5a7134361a
 
 ## Disclaimer
 
-This project was made 100% with AI assistance. I do not know how to make
+This project was made primarily with the assistance of generative AI. I do not know how to make
 Minecraft mods; I created it purely as a utility I wanted.
 
 ## Requirements
@@ -31,8 +31,10 @@ The mod (hopefully) detects any sort of freecam mod where the camera would be de
 4. Scroll while holding to change its distance.
 5. Release the left mouse button to stop dragging.
 
-Dragging is only active with no screen open and only for enabled, unlocked
-placements. Without freecam, normal Minecraft and Litematica behavior is
+Dragging is only active when the camera is in freecam mode and when there is no menu open.
+
+Schematic-drag is also only enabled for unlocked
+placements. Without meeting these conditions, normal Minecraft and Litematica behavior is
 unchanged.
 
 ## Building

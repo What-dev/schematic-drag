@@ -3,6 +3,11 @@
 A client-only Fabric mod for dragging Litematica schematic placements while using
 freecam.
 
+## Disclaimer
+
+This project was made 100% with AI assistance. I do not know how to make
+Minecraft mods; I created it purely as a utility I wanted.
+
 ## Requirements
 
 - Minecraft 26.2
@@ -34,8 +39,5 @@ unchanged.
 
 The built mod is written to `build/libs/`.
 
-## Disclaimer
 
-This project was made 100% with AI assistance. I do not know how to make
-Minecraft mods; I created it purely as a utility I wanted.
 

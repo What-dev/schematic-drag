@@ -6,12 +6,11 @@ import net.fabricmc.fabric.api.event.client.player.ClientPreAttackCallback;
 import net.minecraft.client.Minecraft;
 
 public class SchematicDragClient implements ClientModInitializer {
-	public static final String MOD_ID = "schematic-drag";
 
 	@Override
 	public void onInitializeClient() {
 		ClientTickEvents.END_CLIENT_TICK.register(SchematicDragClient::onEndTick);
-		ClientPreAttackCallback.EVENT.register((client, player, clickCount) -> DragSession.shouldCancelAttack(client));
+		ClientPreAttackCallback.EVENT.register((_, _, _) -> DragSession.shouldCancelAttack());
 	}
 
 	private static void onEndTick(Minecraft client) {
@@ -20,7 +19,7 @@ public class SchematicDragClient implements ClientModInitializer {
 			return;
 		}
 
-		if (getScreen(client) != null || !Freecam.isActive(client)) {
+		if (getScreen(client) != null || Freecam.isInactive(client)) {
 			DragSession.clear();
 			return;
 		}

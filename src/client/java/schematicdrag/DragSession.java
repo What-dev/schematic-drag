@@ -3,10 +3,12 @@ package schematicdrag;
 import fi.dy.masa.litematica.schematic.placement.SchematicPlacement;
 import fi.dy.masa.litematica.selection.Box;
 import fi.dy.masa.malilib.util.position.PositionUtils.CoordinateType;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.network.chat.Component;
 
 public final class DragSession {
 	private static final double MIN_DISTANCE = 1.0;
@@ -21,6 +23,17 @@ public final class DragSession {
 	private static boolean awaitingMovement;
 
 	private DragSession() {
+	}
+
+	private static void OnMouseHold() {
+        var player = Minecraft.getInstance().player;
+		if (player != null) {
+			player.sendOverlayMessage(
+					Component.literal("Schematic Selected")
+							 .withStyle(ChatFormatting.GREEN)
+			);
+		}
+
 	}
 
 	public static boolean isDragging() {
@@ -86,6 +99,8 @@ public final class DragSession {
 			return;
 		}
 
+		OnMouseHold();
+
 		if (awaitingMovement && !hasMoved(client)) {
 			return;
 		}
@@ -107,6 +122,7 @@ public final class DragSession {
 	}
 
 	public static void clear() {
+		Minecraft.getInstance().gui.hud.setOverlayMessage(Component.empty(), true);
 		placement = null;
 		grabOffset = Vec3.ZERO;
 		grabCameraPos = Vec3.ZERO;

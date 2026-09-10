@@ -9,19 +9,19 @@ public final class Freecam {
 	private Freecam() {
 	}
 
-	public static boolean isActive(Minecraft client) {
+	public static boolean isInactive(Minecraft client) {
 		Entity camera = client.getCameraEntity();
 		Player player = client.player;
 
 		if (camera == null || player == null) {
-			return false;
-		}
-
-		if (camera != player) {
 			return true;
 		}
 
-		return FabricLoader.getInstance().isModLoaded("tweakeroo") && tweakerooFreeCameraEnabled();
+		if (camera != player) {
+			return false;
+		}
+
+		return !FabricLoader.getInstance().isModLoaded("tweakeroo") || !tweakerooFreeCameraEnabled();
 	}
 
 	private static boolean tweakerooFreeCameraEnabled() {

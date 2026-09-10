@@ -27,12 +27,12 @@ public final class DragSession {
 		return placement != null;
 	}
 
-	public static boolean shouldCancelAttack(Minecraft client) {
+	public static boolean shouldCancelAttack() {
 		return isDragging();
 	}
 
 	public static boolean tryBegin(Minecraft client) {
-		if (SchematicDragClient.getScreen(client) != null || !Freecam.isActive(client) || isDragging()) {
+		if (SchematicDragClient.getScreen(client) != null || Freecam.isInactive(client) || isDragging()) {
 			return false;
 		}
 
@@ -100,8 +100,7 @@ public final class DragSession {
 		}
 
 		double magnitude = Math.abs(vertical);
-		int step = (int) Math.min(MAX_SCROLL_STEP,
-				Math.max(1, Math.ceil(Math.pow(2.0, Math.max(0.0, magnitude - 1.0)))));
+		int step = (int) Math.clamp(Math.ceil(Math.pow(2.0, Math.max(0.0, magnitude - 1.0))), 1, MAX_SCROLL_STEP);
 		distance = Math.max(MIN_DISTANCE, distance + Math.signum(vertical) * step);
 		awaitingMovement = false;
 		return true;

@@ -22,10 +22,7 @@ public final class DragSession {
 	private static double grabDistance;
 	private static boolean awaitingMovement;
 
-	private DragSession() {
-	}
-
-	private static void OnMouseHold() {
+    private static void OnMouseHold() {
         var player = Minecraft.getInstance().player;
 		if (player != null) {
 			player.sendOverlayMessage(
@@ -122,7 +119,6 @@ public final class DragSession {
 	}
 
 	public static void clear() {
-		Minecraft.getInstance().gui.hud.setOverlayMessage(Component.empty(), true);
 		placement = null;
 		grabOffset = Vec3.ZERO;
 		grabCameraPos = Vec3.ZERO;

@@ -1,7 +1,8 @@
 
 # Schematic Drag
-[![CurseForge](https://shields.io)](https://www.curseforge.com/minecraft/mc-mods/schematic-drag)
-[![Downloads](https://shields.io)](https://www.curseforge.com/minecraft/mc-mods/schematic-drag)
+[![CurseForge](https://img.shields.io/badge/CurseForge-Schematic_Drag-orange?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/schematic-drag)
+[![CurseForge Downloads](https://img.shields.io/curseforge/dt/1689153?logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/schematic-drag)
+)
 
 
 A client-only Fabric mod for dragging Litematica schematic placements while using

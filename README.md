@@ -1,5 +1,8 @@
 
 # Schematic Drag
+[![CurseForge](https://shields.io)](https://www.curseforge.com/minecraft/mc-mods/schematic-drag)
+[![Downloads](https://shields.io)](https://www.curseforge.com/minecraft/mc-mods/schematic-drag)
+
 
 A client-only Fabric mod for dragging Litematica schematic placements while using
 freecam.

@@ -13,10 +13,10 @@ Minecraft mods; I created it purely as a utility I wanted.
 
 ## Requirements
 
-- Minecraft 26.2
-- Fabric Loader 0.19.5 or newer
+- Minecraft 26.3
+- Fabric Loader 0.20.1 or newer
   - Fabric API
-- Litematica 0.28.8 or newer
+- Litematica 0.29.1 or newer
   - MaLiLib
 
 The mod (hopefully) detects any sort of freecam mod where the camera would be detached from the player. I have only personally tested with tweakaroos freecam, but any other should do the trick.
@@ -42,6 +42,5 @@ unchanged.
 ```
 
 The built mod is written to `build/libs/`.
-
 
 

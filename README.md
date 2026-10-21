@@ -11,8 +11,8 @@ freecam.
 
 ## Disclaimer
 
-This project was made primarily with the assistance of generative AI. I do not know how to make
-Minecraft mods; I created it purely as a utility I wanted.
+This project was made primarily with the assistance of generative AI. I am actively how to make
+Minecraft mods; I created it purely as a utility I wanted. Any commits made with genAI will be attributed as such.
 
 ## Requirements
 
